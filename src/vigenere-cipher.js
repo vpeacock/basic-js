@@ -46,7 +46,7 @@ const { NotImplementedError } = require('../extensions/index.js');
 
     let symbols = message.match(/[^a-z]/gi);
 
-    if (symbols) {
+    if (symbols && symbols !== null) {
         for (let i = 0; i < message.length; i++) {
           if (symbols.includes(message[i])) {
             result.splice(i, 0, message[i]);
@@ -86,7 +86,7 @@ const { NotImplementedError } = require('../extensions/index.js');
 
     let symbols = message.match(/[^a-z]/gi);
 
-    if (symbols) {
+    if (symbols && symbols !== null) {
       for (let i = 0; i < message.length; i++) {
         if (symbols.includes(message[i])) {
           result.splice(i, 0, message[i]);
